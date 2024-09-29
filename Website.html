@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Welcome to My Website!</h1>
+    <p>This is my first HTML page, and I'm excited to learn web development.</p>
+    
+    <a href="https://www.example.com">Visit Example Site</a>
+    
+    <ul>
+        <li>Learn HTML</li>
+        <li>Master CSS</li>
+        <li>Explore JavaScript</li>
+    </ul>
+
+    <img src="/Users/danielsmith/Desktop/a.png" alt="Placeholder Image">
+
+    <p>Isn’t this a cool picture?</p>
+
+    <p>Below is a simple table with some data:</p>
+
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Occupation</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>28</td>
+            <td>Engineer</td>
+        </tr>
+        <tr>
+            <td>Mary</td>
+            <td>34</td>
+            <td>Designer</td>
+        </tr>
+    </table>
+
+    <p>Please fill out the form below:</p>
+
+    <form id="myForm" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+    
+            // Check if the name field is empty
+            if (name === "") {
+                alert("Name must be filled out");
+                return false;
+            }
+    
+            // Check if the email field is empty or not a valid email format
+            if (email === "") {
+                alert("Email must be filled out");
+                return false;
+            } else if (!validateEmail(email)) {
+                alert("Invalid email format");
+                return false;
+            }
+    
+            return true;
+        }
+    
+        // Function to validate email format using a regular expression
+        function validateEmail(email) {
+            var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+    </script>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    
+
+</body>
+</html>
