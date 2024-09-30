@@ -75,3 +75,40 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline;
 }
+
+.logo {
+    width: 150px; /* Adjust the width to fit your design */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Slightly enlarge the logo on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+}
+
+header {
+    text-align: center;
+    padding: 20px 0; /* Add some space above and below the logo */
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+header {
+    text-align: center;
+    padding: 40px 0;
+    background: linear-gradient(135deg, #3498db, #2ecc71); /* A cool diagonal gradient */
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
